@@ -16,9 +16,27 @@ body {
   font-size: 16px;
 }
 
+/* animated background */
+body.celebrate {
+  background: linear-gradient(-45deg, #fa0509, #f20d96, #308ecf, #1ed5e1);
+  background-size: 400% 400%;
+  animation: gradient 6s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 h1 {
   width: 100%;
-  padding-top: 1em;
   font-size: 32px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -27,7 +45,6 @@ h1 {
 .container {
   display: flex;
   justify-content: center;
-  text-align: left;
   flex-wrap: wrap;
   width: 100%;
   max-width: 600px;
@@ -43,4 +60,18 @@ h1 {
 
 .hide {
   display: none;
+}
+
+.success {
+  text-transform: uppercase;
+  color: #f16059;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: none;
+  font-family: "Montserrat";
+  flex-wrap: nowrap;
+}
+
+img {
+  width: 80%;
 }
